@@ -4,8 +4,7 @@
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "1024",
   "memory": "3072",
-  "taskRoleArn": "arn:aws:iam::020194054005:role/LabRole",
-  "executionRoleArn": "arn:aws:iam::020194054005:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::020194054005:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "bankchurn-container",
