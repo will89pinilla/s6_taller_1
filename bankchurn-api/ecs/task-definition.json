@@ -5,6 +5,7 @@
   "cpu": "1024",
   "memory": "3072",
   "executionRoleArn": "arn:aws:iam::020194054005:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::020194054005:role/ecsTaskRole",
   "containerDefinitions": [
     {
       "name": "bankchurn-container",
