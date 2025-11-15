@@ -1,0 +1,28 @@
+{
+  "family": "bankchurn-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "3072",
+  "taskRoleArn": "arn:aws:iam::020194054005:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::020194054005:role/LabRole",
+  "containerDefinitions": [
+    {
+      "name": "bankchurn-container",
+      "image": "020194054005.dkr.ecr.us-east-1.amazonaws.com/bankchurn-api:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8001,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "PORT",
+          "value": "8001"
+        }
+      ]
+    }
+  ]
+}
